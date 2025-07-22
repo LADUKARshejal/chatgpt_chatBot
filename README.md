@@ -1,0 +1,1 @@
+This project is a responsive and intelligent chatbot application built using the MERN stack (MongoDB, Express.js, React.js, Node.js) that integrates OpenAI’s ChatGPT API to simulate human-like conversations. It supports real-time communication, user authentication, and personalized chat history.
