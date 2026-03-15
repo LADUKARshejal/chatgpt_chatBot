@@ -14,7 +14,7 @@ const Chat = () => {
 
     setLoading(true);
 
-    let url = "http://localhost:3000/api/conversation";
+    let url = "https://chatgpt-chatbot-azc3.onrender.com/api/conversation";
 
     if (conversation) {
       url = `${url}/${conversation._id}`;
