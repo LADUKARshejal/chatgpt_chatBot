@@ -1,13 +1,13 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
+
+const messageSchema = new mongoose.Schema({
+  role: String,
+  content: String
+});
 
 const conversationSchema = new mongoose.Schema({
-  title : {type: String, required: true},
-  model: {type: String, required: true},
-  startTime: {type: Date, required: true, default: Date.now},
-  messages: [{
-    role: {type: String, required: true},
-    content: {type: String, required: true}
-  }]
+  title: String,
+  messages: [messageSchema]
 });
 
 export default mongoose.model("Conversation", conversationSchema);

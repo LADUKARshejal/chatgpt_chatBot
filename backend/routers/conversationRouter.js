@@ -1,10 +1,10 @@
 import express from "express";
-import * as conversationController from "../controllers/conversationController.js";
-const conversationRouter = express.Router();
+import { newConversation, continueConversation } from "../controllers/conversationController.js";
 
-conversationRouter.get("/conversation", conversationController.getConversations);
-conversationRouter.post("/conversation", conversationController.newConversation);
-conversationRouter.put("/conversation/:id", conversationController.newMessage);
-conversationRouter.delete("/conversation/:id", conversationController.deleteConversation);
+const router = express.Router();
 
-export default conversationRouter;
+router.post("/conversation", newConversation);
+
+router.put("/conversation/:id", continueConversation);
+
+export default router;
