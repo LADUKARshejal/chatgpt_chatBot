@@ -1,4 +1,4 @@
-import Conversation from "../models/conversation.js";
+import Conversation from "../models/Conversation.js";
 import * as chatgptService from "../service/chatgptService.js";
 
 export const newConversation = async (req, res, next) => {
